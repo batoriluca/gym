@@ -1,0 +1,907 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        /*background-image: linear-gradient(70deg, #fdb33bd0 0%, #ffbc509b 100%);*/
+        background-color: #6c5ce76e;
+        display: flex;
+        user-select: none;
+    }
+    
+    .menu {
+        width: 15%;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .menu menu {
+        position: fixed;
+        top: 50%;
+        padding: 30px;
+        transform: translateY(-50%);
+        width: 15%;
+    }
+    
+    .menu menu ul {
+        list-style: none;
+        width: 100%;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        outline: none;
+    }
+    
+    .menu menu ul li {
+        display: flex;
+        width: 100%;
+        padding: 10px 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        justify-content: center;
+        border-radius: 30px;
+        cursor: pointer;
+        outline: none;
+        opacity: 1;
+        background-color: #6c5ce76e;
+    }
+    
+    .menu ul li i {
+        margin-right: 15px;
+        width: 10px;
+        color: rgb(78, 78, 78);
+        color: white;
+        line-height: 25px;
+    }
+    
+    .menu ul li h4 {
+        color: rgb(78, 78, 78);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        line-height: 25px;
+    }
+    
+    .cont {
+        width: 100%;
+        display: flex;
+    }
+    
+    .container {
+        width: 84%;
+        position: relative;
+        background-color: white;
+        height: 96vh;
+        margin-top: 2vh;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 30px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 6px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to top, #6c5ce7c5 0%, #ffd1ff 50%, #6c5ce76e 100%);
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #6c5ce7c5;
+    }
+    
+    .container h1 {
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+        margin-left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        color: #6c5ce7;
+        text-align: center;
+    }
+    
+    .options {
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .options .option {
+        width: 400px;
+        height: 500px;
+        box-shadow: inset -5px -5px 10px #6c5ce76e, inset 5px 5px 10px #6c5ce76e;
+        background-color: #6c5ce76e;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .options .video-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffe0ff;
+        clip-path: circle(150px at 80% 20%);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .options .video-card:hover:before {
+        clip-path: circle(300px at 80% -20%);
+    }
+    
+    .options .text-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fffca2;
+        clip-path: circle(150px at 80% 20%);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .options .text-card:hover:before {
+        clip-path: circle(300px at 80% -20%);
+    }
+    
+    .options .img-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #d6fff6;
+        clip-path: circle(150px at 80% 20%);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .options .img-card:hover:before {
+        clip-path: circle(300px at 80% -20%);
+    }
+    
+    .options .option .imgCard {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 10;
+        height: 220px;
+        width: 100%;
+        transition: 0.5s;
+    }
+    
+    .options .option:hover .imgCard {
+        top: 30%;
+        transform: translateY(-40%);
+    }
+    
+    .options .option .imgCard img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 100%;
+        transition: 0.5s;
+        width: 200px;
+    }
+    
+    .options .option .card-cont {
+        position: absolute;
+        top: 80%;
+        transform: translateY(-50%);
+        z-index: 10;
+        height: 220px;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s;
+    }
+    
+    .options .option .card-cont h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 100%;
+        transition: 0.5s;
+        width: 150px;
+        font-family: 'Poppins', sans-serif;
+        color: #6c5ce7;
+        font-size: 35px;
+    }
+    
+    .options .option:hover .card-cont h2 {
+        top: 10%;
+    }
+    
+    .options .option .card-cont p {
+        position: absolute;
+        top: 130%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 100%;
+        transition: 0.5s;
+        width: 350px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        font-size: 12px;
+    }
+    
+    .options .option:hover .card-cont p {
+        top: 42%;
+    }
+    
+    .options .option .card-cont button {
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 100%;
+        transition: 0.5s;
+        width: 130px;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: inset -5px -5px 10px #6c5ce76e, inset 5px 5px 10px #6c5ce76e;
+        background-color: #6c5ce76e;
+        outline: none;
+        border: none;
+        padding: 10px 0;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .options .option:hover .card-cont button {
+        top: 75%;
+    }
+    
+    .options .option:hover .card-cont button:hover {
+        background-color: #6c5ce7;
+    }
+    
+    .p1 {
+        display: block;
+    }
+    
+    .text-post,
+    .img-post {
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+    
+    .video-post {
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+    
+    .video-post::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: 100px;
+        width: 100%;
+        height: 100%;
+        background-color: #ffe0ff;
+        clip-path: circle(450px at 80% 20%);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .img-post::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: 100px;
+        width: 100%;
+        height: 100%;
+        background-color: #d6fff6;
+        clip-path: circle(450px at 80% 20%);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .text-post::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: 100px;
+        width: 100%;
+        height: 100%;
+        background-color: #fffca2;
+        clip-path: circle(450px at 80% 20%);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .post {
+        position: relative;
+        width: 500px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 100px;
+    }
+    
+    .post .profileimg {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: -25px;
+        top: -25px;
+        border-radius: 50%;
+        z-index: 2;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .fullpost {
+        width: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .post-cont {
+        position: relative;
+    }
+    
+    .post-cont i {
+        font-size: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: rgba(0, 0, 0, 0.109);
+        transition: linear 0.3s;
+        cursor: pointer;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+    }
+    
+    .video-post .post-cont i {
+        color: #ffe0ff80;
+    }
+    
+    .video-post .post-cont i:hover {
+        color: #ffe0ff;
+    }
+    
+    .img-post .post-cont i:hover {
+        color: #d6fff6;
+    }
+    
+    .text-post .post-cont i:hover {
+        color: #fffca2;
+    }
+    
+    .fullpost .post-info {
+        font-family: 'Poppins', sans-serif;
+        justify-content: space-between;
+    }
+    
+    .fullpost #like {
+        position: absolute;
+        padding: 21px 19px;
+        font-size: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        right: -25px;
+        bottom: -25px;
+        background-image: linear-gradient(to top, white 0%, white 100%);
+        border-radius: 50%;
+        color: #6c5ce7;
+        cursor: pointer;
+        text-align: center;
+        transition: linear 0.3s;
+    }
+    
+    .post-cont video {
+        width: 500px;
+    }
+    
+    .image {
+        height: 200px;
+        max-height: 500px;
+        overflow: hidden;
+    }
+    
+    .post-cont img {
+        width: 500px;
+    }
+    
+    .fullpost #like:hover {
+        background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    }
+    
+    .fullpost .post-info p {
+        opacity: 0.5;
+        font-size: 15px;
+        color: #6c5ce7;
+        font-weight: 700;
+        margin-left: 50px;
+    }
+    
+    .fullpost .post-info h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-right: 20px;
+        color: #6c5ce7;
+    }
+    
+    .post-cont input {
+        display: none;
+    }
+    
+    .post-info textarea {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        width: calc(100% - 100px);
+        margin-left: 50px;
+        margin-right: 130px;
+        font-family: 'Poppins', sans-serif;
+        color: #6c5ce7;
+        font-weight: 800;
+        font-size: 20px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        resize: none;
+    }
+    
+    .post-info textarea::placeholder {
+        color: #6c5ce7;
+    }
+    
+    .back {
+        position: relative;
+        left: 50px;
+        top: 60px;
+        cursor: pointer;
+        font-size: 30px;
+        color: #6c5ce7;
+    }
+    
+    input[type="submit"] {
+        color: #6c5ce7;
+        position: absolute;
+        background-color: white;
+        border: 2px solid #6c5ce7;
+        cursor: pointer;
+        left: 50%;
+        font-family: 'Poppins', sans-serif;
+        bottom: 200px;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        transition: 0.2s linear;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    
+    input[type="submit"]:hover {
+        color: white;
+        border-radius: 15px;
+        background-color: #6c5ce7;
+    }
+    
+    @media screen and (max-width: 1600px) {
+        .menu ul li h4 {
+            font-size: 14px;
+        }
+        .options .option {
+            width: 350px;
+        }
+    }
+    
+    @media screen and (max-width: 1500px) {
+        .options .option .card-cont button,
+        .options .option:hover .card-cont button {
+            position: absolute;
+            top: 120px;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            width: 130px;
+        }
+        .options .video-card::before,
+        .options .img-card::before,
+        .options .text-card::before {
+            clip-path: circle(300px at 80% -20%);
+        }
+        .options .option .card-cont p,
+        .options .option:hover .card-cont p {
+            position: absolute;
+            top: 30px;
+            left: 300px;
+            transform: translate(0%, 0%);
+            z-index: 10;
+            width: 100%;
+            transition: 0.5s;
+            width: 350px;
+            font-family: 'Poppins', sans-serif;
+            color: #6c5ce7;
+            font-size: 12px;
+        }
+        .options .option .card-cont h2,
+        .options .option:hover .card-cont h2 {
+            position: absolute;
+            top: 0%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+        }
+        .options .option .imgCard img,
+        .options .option:hover .imgCard img {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 150px;
+        }
+        .menu ul li h4 {
+            display: none;
+        }
+        .menu ul li i {
+            font-size: 20px;
+            margin-right: 0px;
+            margin-left: 0px;
+            transform: translateX(-50%);
+        }
+        #i3 {
+            font-size: 26px;
+        }
+        .options {
+            display: block;
+        }
+        .options .option {
+            width: 650px;
+            height: 200px;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    
+    @media screen and (max-width: 850px) {
+        .options .option .card-cont p,
+        .options .option:hover .card-cont p {
+            position: absolute;
+            top: 0px;
+            left: 280px;
+            transform: translate(0%, 0%);
+            z-index: 10;
+            transition: 0.5s;
+            width: 250px;
+            font-family: 'Poppins', sans-serif;
+            color: #6c5ce7;
+            font-size: 12px;
+        }
+        .options .option .imgCard img,
+        .options .option:hover .imgCard img {
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 120px;
+        }
+        .options .option {
+            width: 550px;
+            height: 200px;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .cont {
+            display: block;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        .menu {
+            width: 100%;
+            height: 70px;
+            position: relative;
+        }
+        .menu menu {
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 20px;
+        }
+        .menu menu ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .menu menu ul li {
+            display: flex;
+            width: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 10px 20px;
+            margin-top: 0px;
+            text-align: center;
+            justify-content: center;
+        }
+        #i3 {
+            font-size: 26px;
+        }
+        menu a {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        body {
+            overflow-y: hidden;
+        }
+        .container {
+            width: 90%;
+            margin-left: 5%;
+        }
+    }
+    
+    @media screen and (max-width: 650px) {
+        .options .option .card-cont button,
+        .options .option:hover .card-cont button {
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 100px;
+        }
+        .options .option .imgCard img,
+        .options .option:hover .imgCard img {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 100px;
+        }
+        .options .option .card-cont p,
+        .options .option:hover .card-cont p {
+            top: 25px;
+            left: 140px;
+            width: 250px;
+            font-size: 12px;
+        }
+        .options .option {
+            width: 400px;
+            height: 200px;
+            top: 130px;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .options .option .card-cont h2,
+        .options .option:hover .card-cont h2 {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+        }
+        .options .video-card::before,
+        .options .video-card:hover::before,
+        .options .img-card::before,
+        .options .img-card:hover::before,
+        .options .text-card::before,
+        .options .text-card:hover::before {
+            clip-path: circle(200px at 80% -20%);
+        }
+        .options .img-card {
+            margin-bottom: 180px;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        .options .img-card {
+            margin-bottom: 180px;
+        }
+        .options .option .card-cont button,
+        .options .option:hover .card-cont button {
+            position: absolute;
+            top: -30px;
+            left: 170px;
+            transform: translate(0%, 0%);
+            width: 100px;
+        }
+        .options .option .card-cont p,
+        .options .option:hover .card-cont p {
+            top: 25px;
+            left: 20px;
+            width: 250px;
+            font-size: 12px;
+        }
+        .options .option .card-cont h2,
+        .options .option:hover .card-cont h2 {
+            top: -40px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 100px;
+        }
+        .options .option .imgCard img,
+        .options .option:hover .imgCard img {
+            display: none;
+        }
+        .options .option {
+            width: 300px;
+            height: 200px;
+            margin-top: 20px;
+            top: 130px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .container h1 {
+            font-size: 20px;
+        }
+        .menu ul li i {
+            font-size: 13px;
+            transform: translateX(-50%);
+        }
+        .menu {
+            width: 100%;
+            height: 60px;
+            position: relative;
+        }
+        .menu menu {
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px 20px;
+        }
+        .menu menu ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .menu menu ul li {
+            padding: 10px 10px 10px 15px;
+            margin-top: 0px;
+            text-align: center;
+            justify-content: center;
+        }
+        menu a {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        #i3 {
+            font-size: 17px;
+        }
+    }
+    
+    @media screen and (max-width: 350px) {
+        .options .video-card::before,
+        .options .video-card:hover::before,
+        .options .img-card::before,
+        .options .img-card:hover::before,
+        .options .text-card::before,
+        .options .text-card:hover::before {
+            clip-path: circle(150px at 80% -20%);
+        }
+        .options .option .card-cont button,
+        .options .option:hover .card-cont button {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            padding: 5px;
+            transform: translate(0%, 0%);
+            width: 100px;
+        }
+        .options .option .card-cont p,
+        .options .option:hover .card-cont p {
+            top: 35px;
+            left: 10px;
+            width: 200px;
+            font-size: 10px;
+        }
+        .options .option .card-cont h2,
+        .options .option:hover .card-cont h2 {
+            top: 0px;
+            font-size: 20px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 50px;
+        }
+        .options .option {
+            width: 220px;
+            height: 150px;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .menu ul li i {
+            font-size: 11px;
+        }
+        .menu {
+            height: 40px;
+        }
+        .menu menu ul li {
+            padding: 2px 2px 2px 10px;
+        }
+        menu a {
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+        #i3 {
+            font-size: 16px;
+        }
+        .container {
+            width: 100%;
+            background-color: transparent;
+            box-shadow: none;
+            overflow: unset;
+            overflow-x: hidden;
+            margin-left: 0px;
+        }
+    }
+    
+    @media screen and (max-height: 650px) {
+        .options .video-card::before,
+        .options .video-card:hover::before,
+        .options .img-card::before,
+        .options .img-card:hover::before,
+        .options .text-card::before,
+        .options .text-card:hover::before {
+            clip-path: circle(150px at 80% -20%);
+        }
+        .options .option .card-cont button,
+        .options .option:hover .card-cont button {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            padding: 5px;
+            transform: translate(0%, 0%);
+            width: 100px;
+        }
+        .options .option .card-cont p,
+        .options .option:hover .card-cont p {
+            top: 35px;
+            left: 10px;
+            width: 200px;
+            font-size: 10px;
+        }
+        .options .option .card-cont h2,
+        .options .option:hover .card-cont h2 {
+            top: 0px;
+            font-size: 20px;
+            left: 20px;
+            transform: translate(0%, 0%);
+            width: 50px;
+        }
+        .options .option .imgCard img,
+        .options .option:hover .imgCard img {
+            display: none;
+        }
+        .options {
+            display: flex;
+            left: 62%;
+            transform: translate(-50%, -50%);
+        }
+        .options .option {
+            width: 220px;
+            height: 140px;
+            margin-top: 20px;
+            margin-left: 20px;
+            transform: translateX(-50%);
+        }
+    }
