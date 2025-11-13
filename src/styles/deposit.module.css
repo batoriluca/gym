@@ -1,0 +1,928 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 10s linear infinite;
+    overflow: hidden;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: 1;
+    font-size: 20px;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main_container {
+    width: 80%;
+    position: relative;
+    height: 92vh;
+    margin: auto;
+    margin-top: 4vh;
+    background: #1d1d1d63;
+    margin-bottom: 4vh;
+    /*box-shadow: 1px -12px 14px 7px rgb(255 255 255 / 0%), -2px -3px 20px 5px rgb(255 255 255 / 69%);*/
+    /*box-shadow: 1px -2px 15px 5px #6657DA, 1px -2px 150px 5px #6657DA;*/
+    overflow: hidden;
+    border-radius: 16px;
+    /* background: rgb(255 255 255 / 36%); */
+    display: flex;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+.shadoww,
+.shadoww2
+{
+    position: absolute;
+    border-radius: 16px;
+    top: calc(4vh - 1px);
+    left: calc(10% - 1px);
+    background:linear-gradient(90deg, #6657da, pink,#efd28e, #7071E8, #C683D7, #ED9ED6, #d0b35a,  #C3ACD0, #7743DB);
+    background-size: 400%;
+    width: calc(80% + 2px);
+    height: calc(92vh + 2px);
+    border-radius: 16px;
+    z-index: 2;
+    animation: cardAnm 50s linear infinite;
+}
+
+.bgbh{
+    position: absolute;
+    border-radius: 16px;
+    top: 4vh;
+    left: 10%;
+    width: 80%;
+    height: 92vh;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+
+.carousel{
+    animation: crs 15s linear infinite;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    transform: translateY(-50%);
+}
+@keyframes crs {
+    from{
+        transform: translate(0%, -50%);
+    }
+    to{
+        transform: translate(-100%, -50%);
+    }
+}
+.bgimg{
+    width: 100vw;
+    top: 50%;
+    z-index: 2;
+}
+.shadoww2{
+    filter: blur(50px);
+}
+
+
+@keyframes cardAnm {
+    0%{
+        background-position: 0 0;
+
+    }
+    50%{
+        background-position: 200% 0;
+        
+    }
+    100%{
+        background-position: 0 0;
+        
+    }
+}
+
+
+/* Here is the nav bar css */
+
+.navbar_contanier {
+    width: 13%;
+}
+
+.navbar_contanier {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container_navbar .navbar {
+    width: 100%;
+}
+
+
+/* Here is the main container css */
+
+.content_contanier {
+    width: 87%;
+}
+
+
+/* Content container  */
+
+.status_bar {
+    display: flex;
+    padding: 3px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greets_to_user {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container_searchbar {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10.5px 0px;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    width: 355px;
+    height: 30px;
+    padding: 6px 12px;
+    background: linear-gradient( 180deg, rgba(46, 51, 90, 0.3) 0%, rgba(28, 27, 51, 0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.searchbox svg {
+    color: #fff;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.searchInput {
+    border: 0;
+    width: 100%;
+    color: #fff;
+    background: transparent;
+   
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.searchInput::placeholder {
+    color: #fff;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchInput:focus-visible {
+    outline: none;
+}
+
+.user_btns {
+    display: flex;
+    margin-left: 10px;
+}
+
+.user_btns svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.profileimg {
+    width: 30px;
+    margin-left: 10px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Here is the post */
+
+.feed_with_user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frow h5 {
+    line-height: 40px;
+    font-size: 20px;
+    color: #b6b6b6;
+}
+
+.feed_posts {
+    height: 84vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background: #ffffff08;
+    padding-bottom: 0px;
+    width: 65%;
+}
+
+.post .profileimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user_name {
+    margin-left: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.profile_bar {
+    width: 35%;
+    position: relative;
+    color: white;
+    overflow-y: auto;
+    height: 84vh;
+    font-family: "Poppins", sans-serif;
+    margin-top: 0px;
+    margin-left: 10px;
+    background-color: #A4A4A4;
+    background-color: #ffffff08;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.profile_pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.dm h1 {
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #6657da;
+}
+
+.checkoutt {
+    background-color: #00000056;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #6657da;
+}
+
+.checkoutt input {
+    border: none;
+    border-radius: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #6657da;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.checkoutt p {
+    color: rgb(255, 43, 43);
+    font-family: "DM Sans", sans-serif;
+    margin-top: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.forch{
+    position: relative;
+    overflow: hidden;
+}
+
+.forch .ch{
+    opacity: 0;
+    z-index: 0;
+    transition:  .6s cubic-bezier(.25,1,.5,1);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+    bottom: 0%;
+    background-image: radial-gradient(67% 123% at 50% 100%,rgba(208, 183, 223, 0.4) 0%,rgba(255,255,255,0) 100%);
+    
+}
+
+.forch:hover .ch{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1150px) {
+    .main_container {
+        width: 100%;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        background-image: url(/img/resp.png);
+        background-size: contain;
+        padding-bottom: 75px;
+    }
+    .navbar_contanier {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        z-index: 100;
+        background-color: #00000046;
+        backdrop-filter: blur(10px);
+    }
+    .content_contanier {
+        width: 100%;
+    }
+    .profile_bar {
+        display: none;
+    }
+    .container_navbar .navbar {
+        width: 100%;
+    }
+    .searchbox {
+        width: 360px;
+        height: 40px;
+        margin: auto 0;
+        border-radius: 30px;
+    }
+    .feed_posts {
+        background: #ffffff08;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 150px;
+    }
+    .greets_to_user {
+        display: none;
+    }
+    .status_bar {
+        padding: 10px 20px;
+        background: #4a4949;
+    }
+    .container_searchbar {
+        justify-content: space-between;
+        width: 100%;
+        padding: 6.5px 0px;
+    }
+    .searchInput {
+        font-size: 18px;
+    }
+    .feed_with_user {
+        height: calc(100vh - 130px);
+    }
+    .searchbox svg {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .searchbox {
+        width: 210px;
+        height: 28px;
+    }
+    .feed_with_user {
+        height: calc(100vh - 120px);
+    }
+    .status_bar {
+        padding: 4px 18px;
+    }
+    .searchbox svg {
+        font-size: 18px;
+    }
+    .searchInput {
+        font-size: 15px;
+    }
+    .sc1 i {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main_container {
+        width: 100%;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+    .searchbox svg {
+        font-size: 16px;
+    }
+    .searchInput {
+        font-size: 14px;
+    }
+    .searchbox {
+        width: 200px;
+        height: 28px;
+    }
+}
+
+.user_list {
+    width: 97%;
+    padding: 10px 15px;
+    background-color: #787878;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    font-family: "Poppins", sans-serif;
+    height: 81vh;
+    overflow: auto;
+    border-radius: 28px;
+    padding: 20px 18px;
+    margin-top: 8px;
+}
+
+.profile_bar ul {
+    list-style: none;
+}
+
+.profile_bar ul li {
+    background-color: #525252;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.profile_bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.profile_bar ul li .message {
+    margin-left: 10px;
+}
+
+.profile_bar ul li .message h1 {
+    font-size: 22px;
+}
+
+.profile_bar ul li .message p {
+    margin-top: -7px;
+}
+
+.profile_bar ul li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile_bar ul .notif {
+    background-color: #6e62cd;
+}
+
+.dm {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    margin-right: 10px;
+    overflow-x: hidden;
+    color: #6c5ce7;
+    font-family: "Poppins", sans-serif;
+}
+
+.dm .user_info {
+    margin-top: 0px;
+    display: flex;
+    padding: 10px 0px;
+    padding-top: 30px;
+    color: #2a2a2a;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: #787878;
+    z-index: 3;
+}
+
+.dm .user_info .left {
+    display: flex;
+}
+
+.dm .user_info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dm .user_info .info {
+    margin-left: 20px;
+}
+
+.dm .user_info .info p {
+    margin-top: -10px;
+}
+
+.dm .gotoprofile a {
+    display: flex;
+    color: #000000bd;
+    outline: none;
+    width: 160px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid #00000082;
+}
+
+.dm .gotoprofile a i {
+    line-height: 27px;
+    margin-left: 5px;
+}
+
+
+/* here is chat css */
+
+.dm .chat div.newrow {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dm .chat {
+    width: 100%;
+    overflow: hidden;
+    height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.pret {
+    margin-left: 10px;
+}
+
+.chat select {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 1px #6c5ce7 solid;
+    border-radius: 10px;
+    color: #6c5ce7;
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.chat button {
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: 2px solid #1919198c;
+    background-color: #adadad;
+    font-family: "Poppins", sans-serif;
+    color: #343131;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: linear 0.2s;
+}
+
+.chat button:hover {
+    color: white;
+    background-color: #6c5ce7;
+}
+
+.ref,
+.acc {
+    display: none;
+}
+
+.chat div button {
+    margin-top: 10px;
+}
+
+.chat div h3 {
+    margin-top: 20px;
+}
+
+.chat .refuz:hover {
+    color: white;
+    border: 2px solid red;
+    background-color: red;
+}
+
+.chat a {
+    color: #c3c3c3;
+}
+
+.prett {
+    display: flex;
+}
+
+@media screen and (max-width: 1600px) {
+    .sc1 i {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .artistname {
+        font-size: 25px;
+    }
+    .dm {
+        padding: 15px 20px;
+    }
+    .dm .user_info {
+        padding-top: 15px;
+    }
+    .dm .chat {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .chat h2 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .dm {
+        padding: 15px 20px;
+        height: 82vh;
+    }
+    .dm .user_info {
+        padding-top: 0px;
+    }
+    .dm .chat {
+        height: 64vh;
+    }
+    .chat h3 {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .chat select {
+        font-size: 8px;
+        width: 170px;
+        padding: 5px 5px;
+    }
+    .chat button {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .profile_bar ul li img {
+        width: 40px;
+        height: 40px;
+    }
+    .artistname {
+        font-size: 16px;
+    }
+    .dm .user_info .info p {
+        margin-top: -8px;
+        font-size: 12px;
+    }
+    .user_info h4 {
+        margin-top: 10px;
+    }
+    .dm .gotoprofile a i {
+        line-height: 7px;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    .dm .user_info img {
+        width: 40px;
+        height: 40px;
+    }
+    .dm .user_info .info {
+        margin-left: 5px;
+    }
+    .dm .gotoprofile a {
+        width: 100px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .profile_bar ul li .message p {
+        margin-top: 0px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .dm {
+        padding: 12px 12px;
+        height: 84vh;
+    }
+    .dm .chat {
+        height: 66vh;
+    }
+}
+
+.deposit_card a {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    outline: none;
+    color: #292828;
+}
+
+.deposit_card a i {
+    font-size: 25px;
+}
+
+.deposit_card {
+    position: relative;
+    width: 650px;
+    color: #FFD218;
+    border-radius: 20px;
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    padding: 15px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.deposit_card h2 {
+    margin-top: 20px;
+}
+
+.deposit_card h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.deposit_card h6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    position:relative;
+    font-size: 13px;
+}
+
+.deposit_card input {
+    font-family: "DM Sans", sans-serif;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px;
+}
+
+.deposit_card input::placeholder {
+    color: #6657da;
+}
+
+.deposit_card input[type="text"] {
+    border: 1px #292828 solid;
+    color: #525252;
+    background-color: #00000046;
+    border-radius: 10px;
+}
+
+.deposit_card input[type="submit"] {
+    color: #525252;
+    background-color: #b5b5b5;
+    border: 1px #292828 solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+    .deposit_card {
+        width: 480px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .deposit_card {
+        margin-bottom: 60px;
+        width: 500px;
+    }
+    .cont {
+        display: block;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .container_2 {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .deposit_card {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .deposit_card h6 {
+        font-size: 10px;
+    }
+    .checkoutt input {
+        font-size: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .deposit_card h1 {
+        font-size: 13px;
+    }
+    .deposit_card h2 {
+        font-size: 12px;
+        width: 100%;
+    }
+    .deposit_card h3 {
+        font-size: 12px;
+    }
+    .deposit_card a {
+        top: 17px;
+        left: 15px;
+    }
+    .deposit_card {
+        margin-bottom: 100px;
+        padding: 0px;
+        width: 100%;
+    }
+    #i3 {
+        font-size: 17px;
+    }
+    .checkoutt p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .deposit_card {
+        margin-bottom: 100px;
+        padding: 10px;
+    }
+    #i3 {
+        font-size: 16px;
+    }
+    .container_2 {
+        width: 100%;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-height: 750px) and (min-width: 1151px) {
+    .dm,
+    .feed_posts,
+    .profile_bar {
+        height: 80vh;
+    }
+}

@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 30s linear infinite;
+    overflow: hidden;
+    position: relative;
+    overflow-y: hidden;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.vidbg{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.intro {
+    position: absolute;
+    left: 50%;
+    box-shadow: /* ie */
+                 0px -10px 15px -6px  rgba(255,000,000,0.7), /* top - THE RED SHADOW */
+                 0px  5px  15px  0px  rgba(000,000,000,0.3), /* bottom */
+                 5px  0px  15px  0px  rgba(000,000,000,0.3), /* right */
+                -5px  0px  15px  0px  rgba(000,000,000,0.3); /* left */
+    -webkit-box-shadow:
+                 0px -10px 15px -7px  rgba(0, 0, 0, 0.18), /* top - THE RED SHADOW */
+                 0px  5px  15px  0px  rgba(000,000,000,0.18), /* bottom */
+                 5px  0px  15px  0px  rgba(000,000,000,0.18), /* right */
+                -5px  0px  15px  0px  rgba(000,000,000,0.18); /* left */
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    top: 50%;
+    font-size: 25px;
+    background-color: rgba(33, 33, 33, 0.582);
+    width: 500px;
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.sc1 p {
+    margin-top: -5px;
+    color: #dddbff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #dddbff;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.sc1 h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #6c5ce7;
+    margin-top: 15px;
+    -webkit-text-fill-color: #6657da;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #6657da;
+}
+
+.sc1 input[type="email"] {
+    margin-top: 30px;
+}
+
+.sc1 button.action_btn {
+    cursor: pointer;
+    color: white;
+    transition: linear 0.3s;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.sc1 button.action_btn:hover {
+    opacity: 1;
+    background-color: #6657da;
+}
+
+button.action_btn.loading::after {
+    content: '';
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    margin: auto;
+    /* position: absolute;
+  left: calc(50% - 0.75em);
+  top: calc(50% - 0.75em); */
+    border: 0.15em solid transparent;
+    border-right-color: #6657DA;
+    border-radius: 50%;
+    animation: button-anim 0.7s linear infinite;
+    opacity: 0;
+}
+
+@keyframes button-anim {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button.action_btn.loading {
+    color: transparent;
+}
+
+button.action_btn.loading::after {
+    opacity: 1;
+}
+
+.sc1 h6 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 10px;
+    color: white;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.sc1 a {
+    text-decoration: none;
+}
+
+.sc1 input,
+.sc1 button.action_btn {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    width: 350px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #00000046;
+    margin-top: 20px;
+}
+
+.from_error {
+    margin-top: 5px !important;
+    -webkit-text-fill-color: #f70000 !important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #ff0000 !important;
+    font-size: 12px !important;
+    color: red !important;
+    width: 350px;
+    margin: auto;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: 1;
+    color: #1B1B1B;
+    font-size: 30px;
+    animation-name: anmBgI;
+    animation-timing-function: ease-in;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.frgtpw {
+    color: #6657DA;
+    font-size: 14px;
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 5px;
+}
+
+@keyframes anmBgI {
+    0%,
+    25% {
+        color: #1B1B1B;
+    }
+    30% {
+        color: #6c5ce793;
+    }
+    35%,
+    90% {
+        color: #1B1B1B;
+    }
+    95% {
+        color: #6c5ce793;
+    }
+    100% {
+        color: #1B1B1B;
+    }
+}
+
+.sc1 .logo {
+    width: 200px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:1200px) {
+    .sc1 i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .sc1 i {
+        font-size: 14px;
+    }
+    .intro {
+        position: absolute;
+        font-size: 24px;
+        width: 450px;
+        padding: 16px;
+        height: 47vh;
+    }
+    .from_error {
+        width: 400px;
+        font-size: 11px !important;
+        margin-top: 8px !important;
+        -webkit-text-stroke-width: 0px !important;
+    }
+    .sc1 input,
+    .sc1 button.action_btn {
+        width: 400px;
+        font-size: 14px;
+    }
+    .sc1 .logo {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sc1 h3 {
+        font-size: 17px;
+    }
+    .sc1 p {
+        font-size: 12px;
+    }
+    .sc1 input[type="email"] {
+        margin-top: 25px;
+    }
+    .sc1 i {
+        font-size: 13px;
+    }
+    .intro {
+        position: absolute;
+        font-size: 24px;
+        width: 270px;
+        padding: 16px;
+        height: 45vh;
+    }
+    .from_error {
+        width: 230px;
+        font-size: 7px !important;
+        margin-top: 5px !important;
+    }
+    .sc1 input,
+    .sc1 button.action_btn {
+        width: 230px;
+        font-size: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .sc1 .logo {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+    .frgtpw {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sc1 input[type="email"] {
+        margin-top: 22px;
+    }
+    .intro {
+        position: absolute;
+        font-size: 24px;
+        width: 250px;
+        padding: 13px;
+        height: 45vh;
+    }
+    .sc1 input,
+    .sc1 button.action_btn {
+        width: 220px;
+    }
+    .from_error {
+        width: 220px;
+        font-size: 7px !important;
+        margin-top: 5px !important;
+    }
+    .sc1 .logo {
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+}

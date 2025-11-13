@@ -1,0 +1,984 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 10s linear infinite;
+    overflow: hidden;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.frow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frow h5 {
+    line-height: 40px;
+    font-size: 20px;
+    color: #b6b6b6;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main_container {
+    width: 80%;
+    position: relative;
+    height: 92vh;
+    margin: auto;
+    margin-top: 4vh;
+    background: #1d1d1d63;
+    margin-bottom: 4vh;
+    /*box-shadow: 1px -12px 14px 7px rgb(255 255 255 / 0%), -2px -3px 20px 5px rgb(255 255 255 / 69%);*/
+    /*box-shadow: 1px -2px 15px 5px #6657DA, 1px -2px 150px 5px #6657DA;*/
+    overflow: hidden;
+    border-radius: 16px;
+    /* background: rgb(255 255 255 / 36%); */
+    display: flex;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+.shadoww,
+.shadoww2
+{
+    position: absolute;
+    border-radius: 16px;
+    top: calc(4vh - 1px);
+    left: calc(10% - 1px);
+    background:linear-gradient(90deg, #6657da, pink,#efd28e, #7071E8, #C683D7, #ED9ED6, #d0b35a,  #C3ACD0, #7743DB);
+    background-size: 400%;
+    width: calc(80% + 2px);
+    height: calc(92vh + 2px);
+    border-radius: 16px;
+    z-index: 2;
+    animation: cardAnm 50s linear infinite;
+}
+
+.bgbh{
+    position: absolute;
+    border-radius: 16px;
+    top: 4vh;
+    left: 10%;
+    width: 80%;
+    height: 92vh;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+
+.carousel{
+    animation: crs 15s linear infinite;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    transform: translateY(-50%);
+}
+@keyframes crs {
+    from{
+        transform: translate(0%, -50%);
+    }
+    to{
+        transform: translate(-100%, -50%);
+    }
+}
+.bgimg{
+    width: 100vw;
+    top: 50%;
+    z-index: 2;
+}
+.shadoww2{
+    filter: blur(50px);
+}
+
+
+@keyframes cardAnm {
+    0%{
+        background-position: 0 0;
+
+    }
+    50%{
+        background-position: 200% 0;
+        
+    }
+    100%{
+        background-position: 0 0;
+        
+    }
+}
+
+
+/* Here is the nav bar css */
+
+.navbar_contanier {
+    width: 13%;
+}
+
+.navbar_contanier {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container_navbar .navbar {
+    width: 100%;
+}
+
+
+/* Here is the main container css */
+
+.content_contanier {
+    width: 87%;
+}
+
+
+/* Here is the post */
+
+.feed_with_user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed_posts {
+    height: 84vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background:  #ffffff08;
+    padding-bottom: 30px;
+    width: 65%;
+}
+
+.card .ch{
+    opacity: 0;
+    z-index: 0;
+    transition:  .6s cubic-bezier(.25,1,.5,1);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+    bottom: 0%;
+    background-image: radial-gradient(77% 73% at 50% -30%,rgba(234, 229, 194, 0.263) 0%,rgba(255,255,255,0) 100%);
+    
+}
+
+.card:hover .ch{
+    opacity: 1;
+}
+
+.post .profileimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user_name {
+    margin-left: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.profile_bar {
+    width: 35%;
+    position: relative;
+    color: white;
+    overflow-y: auto;
+    height: 84vh;
+    font-family: "Poppins", sans-serif;
+    margin-top: 0px;
+    margin-left: 10px;
+    background-color: #A4A4A4;
+    background-color: #ffffff08;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 850px) {
+    .main_container {
+        width: 100%;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+    }
+    .navbar_contanier {
+        width: 100%;
+        background: #4a4949;
+    }
+    .content_contanier {
+        width: 100%;
+    }
+    .profile_bar {
+        display: none;
+    }
+    .container_navbar .navbar {
+        width: 100%;
+    }
+    .feed_posts {
+        background: #ffffff08;
+        height: 100%;
+        width: 100%;
+    }
+    .greets_to_user {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .feed_with_user {
+        height: 580px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main_container {
+        width: 100%;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+    .feed_with_user {
+        height: 590px;
+    }
+}
+
+.card {
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #00000056;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    /*border: solid 1px #ffd11867;*/
+    overflow: hidden;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.change_pw input[type="password"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #6657da;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-family: "DM Sans", sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.change_pw input[type="submit"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #867bda;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: 0.2s linear;
+}
+
+.change_pw input[type="submit"]:hover {
+    background-color: #6657da;
+    color: white;
+}
+
+.change_pw input[type="password"]::placeholder {
+    color: #867bda;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.contact_form {
+    margin-top: 20px;
+    width: 650px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.faq {
+    width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.warningcard {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    z-index: 100;
+    margin-top: 30px;
+    background-color: #403F3F;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    /* display: none; */
+    margin-bottom: 50px;
+}
+
+.warningcard h2 {
+    color: rgb(255, 43, 43);
+}
+
+.warningcard p {
+    color: rgb(255, 43, 43);
+    font-size: 12px;
+}
+
+.warningcard h6 {
+    color: white;
+}
+
+.warningcard i {
+    position: absolute;
+    color: rgb(255, 43, 43);
+    right: 20px;
+    top: 15px;
+}
+
+.warningcard button {
+    cursor: pointer;
+    background-color: #ffffff21;
+    color: #A4A4A4;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 13px;
+    margin-top: 10px;
+    transition: 0.2s linear;
+    padding: 5px 10px;
+}
+
+.warningcard button:hover {
+    background-color: #87878721;
+    color: #b6b6b6;
+}
+
+.faq h2 {
+    color: #393364;
+}
+
+.q1 p {
+    font-size: 11px;
+}
+
+.delete_acc {
+    width: 100%;
+    /* margin-left: 50px; */
+    display: block;
+    justify-content: space-around;
+}
+
+.delete_acc button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #6657da;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-style: normal;
+    transition: 0.2s linear;
+    width: 100%;
+}
+
+.delete_acc button:hover {
+    background-color: #6657da;
+    color: white;
+}
+
+.wallet {
+    width: 650px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.sure {
+    margin-left: 50px;
+    width: 600px;
+    margin-top: 20px;
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
+    color: #6c5ce7;
+    font-size: 20px;
+    display: none;
+}
+
+.change_pw {
+    width: 650px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.actions button {
+    position: relative;
+    margin-right: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    background-color: #00000046;
+    outline: none;
+    border: none;
+    color: #b3b3b3;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #6657da;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.2s linear;
+}
+
+.totalbalance h3 {
+    color: #4a447b;
+}
+
+.totalbalance h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.totalbalance svg {
+    width: 28px;
+    padding: 2px;
+    display: none;
+    border-radius: 50px;
+}
+
+.box {
+    display: none;
+    transition: opacity 5s ease-in-out;
+    opacity: 0;
+}
+
+.box.show {
+    display: block !important;
+    transition: opacity 5s ease-in-out;
+    opacity: 1;
+}
+
+.totalbalance svg:hover {
+    color: #fff;
+    background-color: #313131;
+}
+
+.actions button:hover {
+    background-color: #87878721;
+    color: #6657da;
+}
+
+.actions a {
+    text-decoration: none;
+}
+
+.srow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card h1 {
+    color: #6c5ce7;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.contact_form textarea {
+    height: 200px;
+    resize: none;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #00000046;
+    color: #b3b3b3;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #867bda;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.contact_form textarea::placeholder {
+    color: #867bda;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.contact_form input[type="submit"] {
+    width: 100%;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    color: #6657da;
+    outline: none;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.2s linear;
+}
+
+.contact_form input[type="submit"]:hover {
+    background-color: #6657da;
+    color: white;
+}
+
+.goback {
+    color: #6c5ce7;
+}
+
+.goback i {
+    position: absolute;
+    left: 35px;
+    font-size: 30px;
+    top: 40px;
+}
+
+.q1 {
+    background-color: #00000046;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1750px) {
+    .change_pw {
+        width: 600px;
+    }
+    .contact_form {
+        width: 600px;
+    }
+    .wallet {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .contact_form textarea {
+        height: 180px;
+    }
+    .sc1 i {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #i3 {
+        font-size: 26px;
+    }
+    .actions button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    .delete_acc button {
+        padding: 10px;
+    }
+    .change_pw {
+        width: 480px;
+        margin-left: 50%;
+    }
+    .contact_form {
+        width: 480px;
+        margin-left: 50%;
+    }
+    .wallet {
+        width: 480px;
+        margin-left: 50%;
+    }
+    /* .faq {
+        width: 600px;
+        margin-left: calc((100% - 600px) / 2);
+    } */
+    /* .delete_acc {
+        width: 600px;
+        margin-bottom: 20px;
+        margin-left: calc((100% - 600px) / 2);
+    } */
+    .container_2 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .main_container {
+        width: 100%;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        background-image: url(/img/resp.png);
+        background-size: contain;
+        padding-bottom: 75px;
+    }
+    .navbar_contanier {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        z-index: 102;
+        background-color: #00000046;
+        backdrop-filter: blur(10px);
+    }
+    .profile_bar {
+        display: block;
+        border-radius: 0px;
+        width: 100%;
+        padding-top: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding-bottom: 150px;
+    }
+    .delete_acc {
+        width: 480px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .warningcard {
+        width: 480px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .content_contanier {
+        width: 100%;
+    }
+    .feed_posts {
+        height: fit-content;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .faq {
+        width: 480px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .feed_with_user {
+        height: calc(100vh - 130px);
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #i3 {
+        font-size: 26px;
+    }
+    .container_2 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .delete_acc {
+        width: 500px;
+        margin-left: 50%;
+    }
+    .change_pw {
+        width: 500px;
+        margin-left: 50%;
+    }
+    .warningcard {
+        width: 500px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact_form {
+        width: 500px;
+        margin-left: 50%;
+    }
+    .wallet {
+        width: 500px;
+        margin-left: 50%;
+    }
+    .faq {
+        width: 500px;
+        margin-left: 50%;
+    }
+    .actions button {
+        margin-right: 10px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .profile_bar {
+        height: fit-content;
+    }
+    .totalbalance h3 {
+        font-size: 16px;
+    }
+    .totalbalance h2 {
+        font-size: 15px;
+    }
+    .actions button {
+        margin-right: 5px;
+        padding: 10px;
+    }
+    .delete_acc {
+        width: 400px;
+        margin-left: 50%;
+    }
+    .warningcard {
+        width: 400px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .change_pw {
+        width: 400px;
+        margin-left: 50%;
+    }
+    .contact_form {
+        width: 400px;
+        margin-left: 50%;
+    }
+    .wallet {
+        width: 400px;
+        margin-left: 50%;
+    }
+    .faq {
+        width: 400px;
+        margin-left: 50%;
+    }
+    .card h1 {
+        font-size: 20px;
+    }
+    .delete_acc button {
+        padding: 10px;
+        /* width: 150px; */
+    }
+    .q1 h1 {
+        font-size: 19px;
+    }
+    .q1 p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .feed_posts{
+        padding: 15px;
+        padding-top: 0px;
+    }
+    .card h1 {
+        font-size: 13px;
+    }
+    .sc1 i {
+        font-size: 12px;
+    }
+    .change_pw input[type="password"] {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .change_pw input[type="submit"] {
+        font-size: 13px;
+    }
+    .warningcard {
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .warningcard h6 {
+        font-size: 13px;
+    }
+    .warningcard p {
+        font-size: 9px;
+    }
+    .warningcard button {
+        font-size: 10px;
+    }
+    .q1 h1 {
+        font-size: 14px;
+    }
+    .q1 p {
+        font-size: 10px;
+    }
+    .delete_acc {
+        width: 100%;
+        margin-left: 50%;
+    }
+    .change_pw {
+        width: 100%;
+        margin-left: 50%;
+    }
+    .contact_form {
+        width: 100%;
+        margin-left: 50%;
+    }
+    .wallet {
+        width: 100%;
+        margin-left: 50%;
+    }
+    .faq {
+        width: 100%;
+        margin-left: 50%;
+    }
+    .faq h2 {
+        font-size: 12px;
+    }
+    .faq p {
+        font-size: 9px;
+    }
+    #i3 {
+        font-size: 17px;
+    }
+    .contact_form textarea {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .contact_form input[type="submit"] {
+        font-size: 13px;
+    }
+    .delete_acc button {
+        padding: 5px;
+        /* width: 100px; */
+        font-size: 10px;
+    }
+    .contact_form p {
+        font-size: 12px;
+    }
+    .srow {
+        display: block;
+    }
+    .actions {
+        margin-top: 10px;
+    }
+    .actions button {
+        font-size: 11px;
+        padding: 5px 10px;
+        margin-top: 0px;
+    }
+    .totalbalance h3 {
+        font-size: 12px;
+    }
+    .feed_with_user {
+        height: calc(100vh - 120px);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .change_pw,
+    .delete_acc,
+    .contact_form,
+    .faq,
+    .wallet {
+        margin-left: 50%;
+    }
+    #i3 {
+        font-size: 16px;
+    }
+    .container_2 {
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        overflow: unset;
+        margin-left: 0px;
+        overflow-x: hidden;
+    }
+}
+
+.from_error {
+    margin-top: 10px !important;
+    -webkit-text-fill-color: #FFD218 !important;
+    -webkit-text-stroke-width: 0px !important;
+    -webkit-text-stroke-color: #FFD218 !important;
+    font-size: 12px !important;
+    color: #FFD218  !important;
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: auto;
+    text-align: left;
+}
+
+@media screen and (max-width: 850px) {
+    .from_error {
+        font-size: 10px !important;
+        margin-top: 8px !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .from_error {
+        font-size: 9px !important;
+        margin-top: 6px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .from_error {
+        font-size: 8px !important;
+        margin-top: 6px !important;
+    }
+}
+
+@media screen and (max-height: 750px) and (min-width: 1151px) {
+    .dm,
+    .feed_posts,
+    .profile_bar {
+        height: 80vh;
+    }
+}

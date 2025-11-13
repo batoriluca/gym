@@ -1,0 +1,1390 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 10s linear infinite;
+    overflow: hidden;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    font-size: 20px;
+    z-index: 1;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main_container {
+    width: 80%;
+    position: relative;
+    height: 92vh;
+    margin: auto;
+    margin-top: 4vh;
+    background: #1d1d1d63;
+    margin-bottom: 4vh;
+    /*box-shadow: 1px -12px 14px 7px rgb(255 255 255 / 0%), -2px -3px 20px 5px rgb(255 255 255 / 69%);*/
+    /*box-shadow: 1px -2px 15px 5px #6657DA, 1px -2px 150px 5px #6657DA;*/
+    overflow: hidden;
+    border-radius: 16px;
+    /* background: rgb(255 255 255 / 36%); */
+    display: flex;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+.shadoww,
+.shadoww2
+{
+    position: absolute;
+    border-radius: 16px;
+    top: calc(4vh - 1px);
+    left: calc(10% - 1px);
+    background:linear-gradient(90deg, #6657da, pink,#efd28e, #7071E8, #C683D7, #ED9ED6, #d0b35a,  #C3ACD0, #7743DB);
+    background-size: 400%;
+    width: calc(80% + 2px);
+    height: calc(92vh + 2px);
+    border-radius: 16px;
+    z-index: 2;
+    animation: cardAnm 50s linear infinite;
+}
+
+.bgbh{
+    position: absolute;
+    border-radius: 16px;
+    top: 4vh;
+    left: 10%;
+    width: 80%;
+    height: 92vh;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+
+.carousel{
+    animation: crs 15s linear infinite;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    transform: translateY(-50%);
+}
+@keyframes crs {
+    from{
+        transform: translate(0%, -50%);
+    }
+    to{
+        transform: translate(-100%, -50%);
+    }
+}
+.bgimg{
+    width: 100vw;
+    top: 50%;
+    z-index: 2;
+}
+.shadoww2{
+    filter: blur(50px);
+}
+
+
+@keyframes cardAnm {
+    0%{
+        background-position: 0 0;
+
+    }
+    50%{
+        background-position: 200% 0;
+        
+    }
+    100%{
+        background-position: 0 0;
+        
+    }
+}
+
+
+/* Here is the nav bar css */
+
+.navbar_contanier {
+    width: 13%;
+}
+
+.navbar_contanier {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container_navbar .navbar {
+    width: 100%;
+}
+
+
+/* Here is the main container css */
+
+.content_contanier {
+    width: 87%;
+}
+
+
+/* Content container  */
+
+.status_bar {
+    display: flex;
+    padding: 3px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greets_to_user {
+    color: #fff;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container_searchbar {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10.5px 0px;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    width: 355px;
+    height: 30px;
+    padding: 6px 12px;
+    background: linear-gradient(180deg, rgba(46, 51, 90, 0.3) 0%, rgba(28, 27, 51, 0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.searchbox svg {
+    color: #fff;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.searchInput {
+    border: 0;
+    width: 100%;
+    color: #fff;
+    background: transparent;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.searchInput::placeholder {
+    color: #fff;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchInput:focus-visible {
+    outline: none;
+}
+
+.user_btns {
+    display: flex;
+    margin-left: 10px;
+}
+
+.user_btns svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.profileimg {
+    width: 30px;
+    margin-left: 10px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Here is the post */
+
+.feed_with_user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed_posts {
+    background: #ffffff08;
+    width: 65%;
+    height: 84vh;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.post .profileimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user_name {
+    margin-left: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.profile_bar {
+    width: 35%;
+    position: relative;
+    color: white;
+    overflow-y: auto;
+    height: 84vh;
+    font-family: "Poppins", sans-serif;
+    margin-top: 0px;
+    margin-left: 10px;
+    background-color: #A4A4A4;
+    background-color: #ffffff08;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.profile_pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+
+/* USER DETAILS */
+
+.user_details {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.user_detcontent {
+    display: flex;
+    justify-content: space-between;
+    color: #C3C3C3;
+    position: relative;
+}
+
+.user_detcontent i {
+    position: relative;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.post .profileimg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user_name {
+    margin-left: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-text-fill-color: #C3C3C3 !important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #C3C3C3 !important;
+    font-size: 14px;
+}
+
+.post_conttxt .user_name {
+    color: #C3C3C3;
+    margin-left: 0px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 1150px) {
+    .main_container {
+        width: 100%;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        background-image: url(/img/resp.png);
+        background-size: contain;
+        padding-bottom: 75px;
+    }
+    .navbar_contanier {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        z-index: 100;
+        background-color: #00000046;
+        backdrop-filter: blur(10px);
+    }
+    .content_contanier {
+        width: 100%;
+    }
+    .profile_bar {
+        display: none;
+    }
+    .container_navbar .navbar {
+        width: 100%;
+    }
+    .searchbox {
+        width: 360px;
+        height: 40px;
+        margin: auto 0;
+        border-radius: 30px;
+    }
+    .feed_posts {
+        background: #ffffff08;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        padding-bottom: 150px;
+    }
+    .greets_to_user {
+        display: none;
+    }
+    .status_bar {
+        padding: 10px 20px;
+        background: #4a4949;
+    }
+    .container_searchbar {
+        justify-content: space-between;
+        width: 100%;
+        padding: 6.5px 0px;
+    }
+    .searchInput {
+        font-size: 18px;
+    }
+    .searchbox svg {
+        font-size: 24px;
+    }
+    .feed_with_user {
+        height: calc(100vh - 130px);
+    }
+    .p1{
+        padding-bottom: 75px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .searchbox {
+        width: 210px;
+        height: 28px;
+    }
+    .feed_with_user {
+        height: 580px;
+    }
+    .status_bar {
+        padding: 4px 18px;
+    }
+    .searchbox svg {
+        font-size: 18px;
+    }
+    .searchInput {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main_container {
+        width: 100%;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+    .feed_with_user {
+        height: 590px;
+    }
+    .searchbox svg {
+        font-size: 16px;
+    }
+    .searchInput {
+        font-size: 14px;
+    }
+    .searchbox {
+        width: 200px;
+        height: 28px;
+    }
+}
+
+.user_list {
+    width: 97%;
+    padding: 10px 15px;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    font-family: "Poppins", sans-serif;
+    height: 81vh;
+    overflow: auto;
+    border-radius: 28px;
+    padding: 20px 18px;
+    margin-top: 8px;
+}
+
+.profile_bar ul {
+    list-style: none;
+}
+
+.profile_bar ul li {
+    background-color: #525252;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.profile_bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.profile_bar ul li .message {
+    margin-left: 10px;
+}
+
+.profile_bar ul li .message h1 {
+    font-size: 22px;
+}
+
+.profile_bar ul li .message p {
+    margin-top: -7px;
+}
+
+.profile_bar ul li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile_bar ul .notif {
+    background-color: #6e62cd;
+}
+
+.dm {
+    width: 100%;
+    height: 84vh;
+    padding: 0px;
+    padding-left: 40px;
+    padding-top: 20px;
+    color: #6c5ce7;
+    font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 850px) {
+    .artistname {
+        font-size: 25px;
+    }
+    .dm {
+        padding: 15px 20px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .dm {
+        padding: 15px 20px;
+        height: 82vh;
+    }
+    .profile_bar ul li img {
+        width: 40px;
+        height: 40px;
+    }
+    .artistname {
+        font-size: 16px;
+    }
+    .user_info h4 {
+        margin-top: 10px;
+    }
+    .profile_bar ul li .message p {
+        margin-top: 0px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .dm {
+        padding: 12px 12px;
+        height: 84vh;
+    }
+}
+
+.options {
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: auto;
+    position: relative;
+}
+
+.options .option {
+    width: 97%;
+    height: 200px;
+    margin: 20px 0px;
+    background-color: #00000046;
+    border: solid 1px #ffd11867;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.option .ch{
+    opacity: 0;
+    z-index: 0;
+    transition: opacity .6s cubic-bezier(.25,1,.5,1);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+    bottom: 0%;
+    background-image: radial-gradient(57% 83% at 50% 50%,#ffd11853 0%,rgba(255,255,255,0) 100%);
+    
+}
+
+.option:hover .ch{
+    opacity: 1;
+}
+
+.options .video_card::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 130px;
+    z-index: 10;
+    width: 100%;
+    height: 200%;
+    background-color: #4a4949;
+    clip-path: circle(170px at 80% 20%);
+    transition: ease-in-out 0.5s;
+    display: none;
+}
+
+.options .video_card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+    top: 0px;
+    left: 200px;
+}
+
+.options .text_card::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 130px;
+    z-index: 10;
+    width: 100%;
+    height: 200%;
+    background-color: #4a4949;
+    clip-path: circle(170px at 80% 20%);
+    transition: ease-in-out 0.5s;
+    display: none;
+}
+
+.options .text_card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+    top: 0px;
+    left: 200px;
+}
+
+.options .img_card::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 130px;
+    z-index: 10;
+    width: 100%;
+    height: 200%;
+    background-color: #4a4949;
+    clip-path: circle(170px at 80% 20%);
+    transition: ease-in-out 0.5s;
+    display: none;
+}
+
+.options .img_card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+    top: 0px;
+    left: 200px;
+}
+
+.options .option .imgCard {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10;
+    height: 220px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.options .option:hover .imgCard {
+    top: 30%;
+    transform: translateY(-40%);
+}
+
+.options .option .imgCard img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+    transition: 0.5s;
+    width: 200px;
+}
+
+.options .option .card_cont {
+    position: absolute;
+    top: 0%;
+    z-index: 10;
+    height: 220px;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.options .option .card_cont i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 140px;
+    transition: linear 0.3s;
+    color: #00000046;
+    opacity: 1;
+}
+
+.options .option .card_cont:hover i {
+    font-size: 120px;
+}
+
+.options .option .card_cont h2 {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    z-index: 10;
+    width: 100%;
+    transition: 0.5s linear;
+    text-align: left;
+    width: 150px;
+    font-family: "DM Sans", sans-serif;
+    color: #6c5ce7;
+    font-size: 35px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.options .option:hover .card_cont h2 {
+    top: 15px;
+}
+
+.options .option .card_cont p {
+    position: absolute;
+    top: 220px;
+    left: 45px;
+    z-index: 10;
+    width: 100%;
+    transition: 0.5s;
+    width: 250px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 12px;
+}
+
+.options .option:hover .card_cont p {
+    top: 70px;
+}
+
+.options .option .card_cont button {
+    position: absolute;
+    top: 250px;
+    left: 45px;
+    z-index: 10;
+    width: 100%;
+    transition: 0.5s linear;
+    width: 130px;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #00000046;
+    opacity: 1;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.frow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frow h5 {
+    line-height: 40px;
+    font-size: 20px;
+    color: #b6b6b6;
+}
+
+.options .option:hover .card_cont button {
+    top: 140px;
+}
+
+.options .option:hover .card_cont button:hover {
+    background-color: #6657DA;
+    opacity: 1;
+}
+
+.p1 {
+    display: block;
+}
+
+.p1 h1 {
+    color: #6657DA;
+    font-size: 28px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text_post {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.img_post {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.video_post {
+    /* display: none; */
+    width: calc(100% + 40px);
+    overflow-x: hidden;
+}
+
+.video_post::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffe0ff;
+    clip-path: circle(450px at 80% 20%);
+    transition: ease-in-out 0.5s;
+    overflow: hidden;
+    display: none;
+}
+
+.img_post::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #d6fff6;
+    clip-path: circle(450px at 80% 20%);
+    transition: ease-in-out 0.5s;
+    overflow: hidden;
+    display: none;
+}
+
+.text_post::before {
+    content: "";
+    position: absolute;
+    display: none;
+    top: -100px;
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #fffca2;
+    clip-path: circle(450px at 80% 20%);
+    transition: ease-in-out 0.5s;
+    overflow: hidden;
+}
+
+.post {
+    position: relative;
+    width: 600px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.post .profileimg {
+    /* position: absolute; */
+    width: 50px;
+    /* height: 70px; */
+    /* left: -25px;
+    top: -25px; */
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.fullpost {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.post_cont {
+    position: relative;
+}
+
+.post_cont i {
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #00000046;
+    transition: linear 0.3s;
+    cursor: pointer;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.post_cont i:hover {
+    color: #6657DA;
+}
+
+.fullpost .post_info {
+    font-family: "DM Sans", sans-serif;
+    padding: 10px 20px;
+}
+
+.post_cont video {
+    width: 600px;
+}
+
+.image {
+    height: 200px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.post_cont img {
+    width: 600px;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.fullpost .post_info p {
+    font-size: 14px;
+    color: #c5c5c5;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fullpost .post_info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    color: #6c5ce7;
+    font-family: "DM Sans", sans-serif;
+}
+
+.post_cont input {
+    display: none;
+}
+
+.post_info textarea {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-right: 0;
+    font-family: "DM Sans", sans-serif;
+    color: #C3C3C3;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    resize: none;
+    height: 85px;
+    overflow-y: hidden;
+}
+
+.post_info textarea::placeholder {
+    color: #C3C3C3;
+}
+
+.back {
+    position: absolute;
+    color: #6c5ce7;
+}
+
+.back button {
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+.back svg {
+    color: #2a2a2a;
+    height: 30px;
+    width: 30px;
+}
+
+.titlee {
+    text-align: center;
+    color: #2a2a2a;
+    font-size: 28px;
+}
+
+div.submit_btn,
+input.submit_btn {
+    color: white;
+    position: relative;
+    background-color: #6657DA;
+    cursor: pointer;
+    margin-left: 50%;
+    margin-top: 20px;
+    width: 600px;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    transition: 0.2s linear;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.video_post button,
+.text_post button,
+.img_post button {
+    color: white;
+    position: relative;
+    background-color: #00000046;
+    cursor: pointer;
+    margin-left: 50%;
+    width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    transition: 0.2s linear;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.fullpost .like_boxx i {
+    position: absolute;
+    padding: 21px 19px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    right: -25px;
+    bottom: -25px;
+    background-image: linear-gradient(to top, white 0%, white 100%);
+    border-radius: 50%;
+    color: #6c5ce7;
+    cursor: pointer;
+    text-align: center;
+    transition: linear 0.3s;
+}
+
+.fullpost .like_boxx i:hover {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+input.submit_btn:hover {
+    color: white;
+    border-radius: 15px;
+    background-color: #6c5ce7;
+}
+
+.video_post,
+.text_post,
+.img_post {
+    transform: translateX(-40px);
+    border-radius: 20px;
+}
+
+@media screen and (max-height: 750px) and (min-width: 1151px) {
+    .dm,
+    .feed_posts {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    
+    .options .option .card_cont button {
+        position: absolute;
+        top: 220px;
+        font-size: 13px;
+        left: 20px;
+        width: 100px;
+    }
+    .options .option:hover .card_cont button {
+        top: 140px;
+    }
+    .options .video_card::before,
+    .options .img_card::before,
+    .options .text_card::before {
+        clip-path: circle(300px at 80% -10%);
+    }
+    .options .option .card_cont p {
+        top: 230px;
+        left: 20px;
+        width: 200px;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 12px;
+    }
+    .options .option:hover .card_cont p {
+        top: 50px;
+    }
+    .options .option .card_cont h2 {
+        position: absolute;
+        top: 20px;
+        font-size: 25px;
+        left: 20px;
+        width: 150px;
+    }
+    .options .option .imgCard img,
+    .options .option:hover .imgCard img {
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        transform: translate(0%, 0%);
+        width: 150px;
+    }
+    #i3 {
+        font-size: 26px;
+    }
+    .options {
+        display: block;
+    }
+    .p1 h1 {
+        font-size: 23px;
+    }
+    .post {
+        width: 470px;
+    }
+    input.submit_btn {
+        width: 470px;
+    }
+    .video_post button,
+    .text_post button,
+    .img_post button {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .video_post,
+    .text_post,
+    .img_post {
+        transform: translateX(-20px);
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .options .option .card_cont p,
+    .options .option:hover .card_cont p {
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        transform: translate(0%, 0%);
+        z-index: 10;
+        transition: 0.5s;
+        width: 250px;
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        color: white;
+    }
+    .options .option .card_cont button,
+    .options .option:hover .card_cont button {
+        top: 140px;
+        opacity: 1;
+        left: 20px;
+    }
+    .options .option .imgCard img,
+    .options .option:hover .imgCard img {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        transform: translate(0%, 0%);
+        width: 120px;
+    }
+    .options .option {
+        width: 480px;
+        height: 200px;
+        margin-top: 20px;
+        transform: translateX(0%);
+    }
+    #i3 {
+        font-size: 26px;
+    }
+    .container_2 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .video_post,
+    .text_post,
+    .img_post {
+        transform: translateX(0px);
+    }
+    .options .option .card_cont i{
+        color: #6657da42;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    input.submit_btn {
+        width: 100%;
+    }
+    .feed_with_user {
+        height: calc(100vh - 120px);
+    }
+    .video_post button,
+    .text_post button,
+    .img_post button {
+        width: 100%;
+    }
+    .fullpost {
+        width: 100%;
+    }
+    .container_2 h1 {
+        font-size: 20px;
+    }
+    .post_cont video,
+    .post_cont img {
+        width: 350px;
+        max-height: 400px;
+    }
+    .fullpost .post_info p {
+        margin-left: 20px;
+    }
+    .text_post .fullpost .post_info p {
+        margin-left: 40px;
+    }
+    .post_info textarea {
+        margin-left: 20px;
+    }
+    .text_post .post_info textarea {
+        margin-left: 40px;
+    }
+    .post .profileimg {
+        width: 35px;
+        height: 35px;
+        left: -20px;
+        top: -20px;
+    }
+    .user_name{
+        font-size: 12px;
+    }
+    .post {
+        position: relative;
+        width: 100%;
+    }
+    .options .option .card_cont button,
+    .options .option:hover .card_cont button {
+        width: 100px;
+    }
+    .options .option .imgCard img,
+    .options .option:hover .imgCard img {
+        position: absolute;
+        transform: translate(0%, 0%);
+        width: 100px;
+    }
+    .options .option .card_cont p,
+    .options .option:hover .card_cont p {
+        width: 160px;
+        top: 50px;
+        font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+        font-size: 12px;
+    }
+    .options .option {
+        width: 320px;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .options {
+        padding-bottom: 30px;
+    }
+    .options .option .card_cont i {
+        font-size: 100px;
+    }
+    .options .option .card_cont h2,
+    .options .option:hover .card_cont h2 {
+        position: absolute;
+        width: 150px;
+        font-size: 20px;
+    }
+    .post_cont i {
+        font-size: 75px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .post {
+        position: relative;
+    }
+    .post_cont i {
+        font-size: 50px;
+    }
+    .fullpost .post_info p {
+        font-size: 11px;
+    }
+    .fullpost #like {
+        position: absolute;
+        padding: 18px 16px;
+        font-size: 16px;
+        right: -15px;
+        bottom: -15px;
+    }
+    .post_info textarea {
+        font-size: 13px;
+        width: calc(100% - 70px);
+    }
+    .post_cont video {
+        width: 250px;
+    }
+    .post_cont img {
+        width: 250px;
+        max-height: 300px;
+    }
+    .back {
+        left: 20px;
+        top: 37px;
+    }
+    .container_2 h1 {
+        font-size: 20px;
+    }
+    .p1 h1 {
+        font-size: 20px;
+    }
+    .dm {
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .options .option .card_cont button,
+    .options .option:hover .card_cont button {
+        top: 120px;
+    }
+    .options .video_card::before,
+    .options .video_card:hover::before,
+    .options .img_card::before,
+    .options .img_card:hover::before,
+    .options .text_card::before,
+    .options .text_card:hover::before {
+        clip-path: circle(150px at 80% -20%);
+    }
+    .options .option .card_cont button,
+    .options .option:hover .card_cont button {
+        position: absolute;
+        padding: 5px;
+        transform: translate(0%, 0%);
+        width: 100px;
+    }
+    .options .option .card_cont p,
+    .options .option:hover .card_cont p {
+        width: 140px;
+        top: 40px;
+        font-size: 10px;
+    }
+    .options .option .card_cont h2,
+    .options .option:hover .card_cont h2 {
+        font-size: 20px;
+        transform: translate(0%, 0%);
+        width: 50px;
+        top: 10px;
+    }
+    #i3 {
+        font-size: 16px;
+    }
+    .container_2 {
+        width: 100%;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+    .post_cont img {
+        max-height: 250px;
+    }
+    .container_2 h1 {
+        font-size: 16px;
+    }
+    .back {
+        font-size: 16px;
+        left: 20px;
+        top: 33px;
+    }
+    .options .option {
+        width: 260px;
+        height: 160px;
+        margin-top: 20px;
+    }
+    .options {
+        padding-bottom: 70px;
+    }
+    .p1 h1 {
+        font-size: 15px;
+    }
+    .options .option .card_cont i {
+        font-size: 60px;
+    }
+}

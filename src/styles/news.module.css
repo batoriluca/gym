@@ -1,0 +1,1335 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 10s linear infinite;
+    overflow: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    font-size: 20px;
+    z-index: 1;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main_container {
+    width: 80%;
+    position: relative;
+    height: 92vh;
+    margin: auto;
+    margin-top: 4vh;
+    background: #1d1d1d63;
+    margin-bottom: 4vh;
+    /*box-shadow: 1px -12px 14px 7px rgb(255 255 255 / 0%), -2px -3px 20px 5px rgb(255 255 255 / 69%);*/
+    /*box-shadow: 1px -2px 15px 5px #6657DA, 1px -2px 150px 5px #6657DA;*/
+    overflow: hidden;
+    border-radius: 16px;
+    /* background: rgb(255 255 255 / 36%); */
+    display: flex;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+.shadoww,
+.shadoww2
+{
+    position: absolute;
+    border-radius: 16px;
+    top: calc(4vh - 1px);
+    left: calc(10% - 1px);
+    background:linear-gradient(90deg, #6657da, pink,#efd28e, #7071E8, #C683D7, #ED9ED6, #d0b35a,  #C3ACD0, #7743DB);
+    background-size: 400%;
+    width: calc(80% + 2px);
+    height: calc(92vh + 2px);
+    border-radius: 16px;
+    z-index: 2;
+    animation: cardAnm 50s linear infinite;
+}
+
+.bgbh{
+    position: absolute;
+    border-radius: 16px;
+    top: 4vh;
+    left: 10%;
+    width: 80%;
+    height: 92vh;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+
+.carousel{
+    animation: crs 15s linear infinite;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    transform: translateY(-50%);
+}
+@keyframes crs {
+    from{
+        transform: translate(0%, -50%);
+    }
+    to{
+        transform: translate(-100%, -50%);
+    }
+}
+.bgimg{
+    width: 100vw;
+    top: 50%;
+    z-index: 2;
+}
+.shadoww2{
+    filter: blur(50px);
+}
+
+
+@keyframes cardAnm {
+    0%{
+        background-position: 0 0;
+
+    }
+    50%{
+        background-position: 200% 0;
+        
+    }
+    100%{
+        background-position: 0 0;
+        
+    }
+}
+
+
+/* Here is the nav bar css */
+
+.navbar_contanier {
+    width: 13%;
+}
+
+.navbar_contanier {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container_navbar .navbar {
+    width: 100%;
+}
+
+
+/* Here is the main container css */
+
+.content_contanier {
+    width: 87%;
+}
+
+
+/* Content container  */
+
+.status_bar {
+    display: flex;
+    padding: 3px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greets_to_user {
+    color: #fff;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container_searchbar {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10.5px 0px;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    width: 355px;
+    height: 30px;
+    padding: 6px 12px;
+    background: linear-gradient( 180deg, rgba(46, 51, 90, 0.3) 0%, rgba(28, 27, 51, 0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.searchbox svg {
+    color: #fff;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.searchInput {
+    border: 0;
+    width: 100%;
+    color: #fff;
+    background: transparent;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.searchInput::placeholder {
+    color: #fff;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchInput:focus-visible {
+    outline: none;
+}
+
+.user_btns {
+    display: flex;
+    margin-left: 10px;
+}
+
+.user_btns svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.profileimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Here is the post */
+
+.feed_with_user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed_posts {
+    height: 84vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background: #ffffff08;
+    padding-bottom: 0px;
+    width: 65%;
+}
+
+.post .profileimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user_name {
+    margin-left: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.profile_bar {
+    width: 35%;
+    position: relative;
+    color: white;
+    overflow-y: auto;
+    height: 84vh;
+    font-family: "Poppins", sans-serif;
+    margin-top: 0px;
+    margin-left: 10px;
+    overflow-x: hidden;
+    background-color: #A4A4A4;
+    background-color: #ffffff08;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.profile_pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 1150px) {
+    .main_container {
+        width: 100%;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        background-image: url(/img/resp.png);
+        background-size: contain;
+    }
+    .navbar_contanier {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        z-index: 100;
+        background-color: #00000046;
+        backdrop-filter: blur(10px);
+    }
+    .content_contanier {
+        width: 100%;
+    }
+    .profile_bar {
+        display: block;
+        border-radius: 0px;
+        width: 100%;
+        padding-top: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .container_navbar .navbar {
+        width: 100%;
+    }
+    .searchbox {
+        width: 360px;
+        height: 40px;
+        margin: auto 0;
+        border-radius: 30px;
+    }
+    .feed_posts {
+        background: #ffffff08;
+        height: fit-content;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .greets_to_user {
+        display: none;
+    }
+    .status_bar {
+        padding: 10px 20px;
+        background: #4a4949;
+    }
+    .container_searchbar {
+        justify-content: space-between;
+        width: 100%;
+        padding: 6.5px 0px;
+    }
+    .searchInput {
+        font-size: 18px;
+    }
+    .searchbox svg {
+        font-size: 24px;
+    }
+    .feed_with_user {
+        height: calc(100vh - 130px);
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .searchbox {
+        width: 210px;
+        height: 28px;
+    }
+    .status_bar {
+        padding: 4px 18px;
+    }
+    .searchbox svg {
+        font-size: 18px;
+    }
+    .searchInput {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main_container {
+        width: 100%;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+    .feed_with_user {
+        height: 590px;
+    }
+    .searchbox svg {
+        font-size: 16px;
+    }
+    .searchInput {
+        font-size: 14px;
+    }
+    .searchbox {
+        width: 200px;
+        height: 28px;
+    }
+}
+
+.user_list {
+    width: 97%;
+    padding: 10px 15px;
+    background-color: #787878;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    font-family: "Poppins", sans-serif;
+    height: 81vh;
+    overflow: auto;
+    border-radius: 28px;
+    padding: 20px 18px;
+    margin-top: 8px;
+}
+
+.profile_bar ul {
+    list-style: none;
+}
+
+.profile_bar ul li {
+    background-color: #525252;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.profile_bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.profile_bar ul li .message {
+    margin-left: 10px;
+}
+
+.profile_bar ul li .message h1 {
+    font-size: 22px;
+}
+
+.profile_bar ul li .message p {
+    margin-top: -7px;
+}
+
+.profile_bar ul li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile_bar ul .notif {
+    background-color: #6e62cd;
+}
+
+.frow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frow h5 {
+    font-size: 20px;
+    color: #b6b6b6;
+}
+
+.dm {
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    margin-right: 10px;
+    overflow-x: hidden;
+    color: #6c5ce7;
+    font-family: "Poppins", sans-serif;
+}
+
+.dm .user_info {
+    margin-top: 0px;
+    display: flex;
+    padding: 10px 0px;
+    padding-top: 30px;
+    color: #2a2a2a;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: #787878;
+    z-index: 3;
+}
+
+.dm .user_info .left {
+    display: flex;
+}
+
+.dm .user_info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dm .user_info .info {
+    margin-left: 20px;
+}
+
+.dm .user_info .info p {
+    margin-top: -10px;
+}
+
+.dm .gotoprofile a {
+    display: flex;
+    color: #000000bd;
+    outline: none;
+    width: 160px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid #00000082;
+}
+
+.dm .gotoprofile a i {
+    line-height: 27px;
+    margin-left: 5px;
+}
+
+
+/* here is chat css */
+
+.dm .chat div.newrow {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dm .chat {
+    width: 100%;
+    overflow: hidden;
+    height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.pret {
+    margin-left: 10px;
+}
+
+.chat select {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 1px #6c5ce7 solid;
+    border-radius: 10px;
+    color: #6c5ce7;
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.chat button {
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: 2px solid #1919198c;
+    background-color: #adadad;
+    font-family: "Poppins", sans-serif;
+    color: #343131;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: linear 0.2s;
+}
+
+.chat button:hover {
+    color: white;
+    background-color: #6c5ce7;
+}
+
+.ref,
+.acc {
+    display: none;
+}
+
+.chat div button {
+    margin-top: 10px;
+}
+
+.chat div h3 {
+    margin-top: 20px;
+}
+
+.chat .refuz:hover {
+    color: white;
+    border: 2px solid red;
+    background-color: red;
+}
+
+.chat a {
+    color: #c3c3c3;
+}
+
+.prett {
+    display: flex;
+}
+
+@media screen and (max-width: 850px) {
+    .artistname {
+        font-size: 25px;
+    }
+    .dm {
+        padding: 15px 20px;
+        padding-bottom: 0;
+    }
+    .dm .user_info {
+        padding-top: 15px;
+    }
+    .dm .chat {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .chat h2 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .dm .user_info {
+        padding-top: 0px;
+    }
+    .dm .chat {
+        height: 64vh;
+    }
+    .chat h3 {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .chat select {
+        font-size: 8px;
+        width: 170px;
+        padding: 5px 5px;
+    }
+    .chat button {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .profile_bar ul li img {
+        width: 40px;
+        height: 40px;
+    }
+    .artistname {
+        font-size: 16px;
+    }
+    .dm .user_info .info p {
+        margin-top: -8px;
+        font-size: 12px;
+    }
+    .user_info h4 {
+        margin-top: 10px;
+    }
+    .dm .gotoprofile a i {
+        line-height: 7px;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    .dm .user_info img {
+        width: 40px;
+        height: 40px;
+    }
+    .dm .user_info .info {
+        margin-left: 5px;
+    }
+    .dm .gotoprofile a {
+        width: 100px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .profile_bar ul li .message p {
+        margin-top: 0px;
+        font-size: 10px;
+    }
+}
+
+.notifications_card {
+    padding: 20px 40px;
+    background-color: #6c6969;
+    width: 100%;
+    border-radius: 20px;
+    color: #292828;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    max-height: 40vh;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.notification_content {
+    display: flex;
+    margin-top: -5px;
+}
+
+.completed {
+    background-color: #6657DA;
+    color: white;
+}
+
+.notifblock {
+    display: block;
+}
+
+.notification {
+    display: flex;
+    margin-top: 10px;
+    background-color: #ffffff1a;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fan a,
+.feat a,
+.joined a,
+.volume_text a,
+.volume_post a,
+.volume_vid a,
+.review a,
+.contract_accept a,
+.contract_reject a,
+.contract_expired a,
+.prod_sent a {
+    color: #ffd218;
+    text-decoration: none;
+}
+
+.notification img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.notification p {
+    margin-left: 10px;
+}
+.notification .notification_content .notif_text {
+    margin-left: 5px;
+    margin-top: 3px
+}
+.notification .notif_text {
+    font-size: 13px;
+}
+
+
+.notification .p2 a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: solid 1px #ffd11867;
+    background-color: #00000046;
+}
+
+
+.notification .notif_username a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.notification p:nth-child(3) {
+    margin-left: 5px;
+}
+
+.volume_post .imgpost {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 0px;
+}
+
+.volume_vid video {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.volume_post,
+.volume_text,
+.volume_vid,
+.feat,
+.joined,
+.fan,
+.review,
+.contract_accept,
+.contract_reject,
+.contract_expired,
+.prod_sent {
+    display: flex;
+}
+
+.volume_post .p1,
+.volume_text .p1,
+.volume_vid .p1,
+.feat .p1,
+.fan .p1,
+.joined .p1,
+.review .p1,
+.contract_accept .p1,
+.contract_reject .p1,
+.contract_expired .p1,
+.prod_sent .p1 {
+    display: flex;
+}
+
+.media_card {
+    padding: 10px 20px;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    width: 100%;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.media_card .ch{
+    opacity: 0;
+    z-index: 0;
+    transition:  .6s cubic-bezier(.25,1,.5,1);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+    bottom: 0%;
+    background-image: radial-gradient(57% 83% at 50% 50%,rgba(208, 183, 223, 0.4) 0%,rgba(255,255,255,0) 100%);
+}
+.media_card:hover .ch{
+    opacity: 1;
+}
+
+.media_card h1 {
+    font-size: 16px;
+    color: #4a447b;
+    -webkit-text-fill-color: #4a447b !important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #4a447b !important;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.media_card h3 {
+    font-size: 16px;
+}
+
+.media_card a {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.media_card a i {
+    margin-top: 5px;
+    position: relative;
+    color: #A4A4A4;
+    transition: linear 0.2s;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.media_card a i:hover {
+    color: #6657DA;
+}
+
+.media_card .displflx {
+    display: flex;
+}
+
+.displflx h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.media_card .displflx .social_icons {
+    display: grid;
+}
+
+.r_side {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.r_side .monthly_cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.artistofthemonth,
+.sellerofthemonth {
+    width: 45%;
+    border-radius: 10px;
+    color: #292828;
+    box-shadow: 1px -2px 10px 1px #6657DA, 1px -2px 20px 1px #6657DA;
+    font-family: "Poppins", sans-serif;
+    background-color: #00000056;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    position: relative;
+    overflow: hidden;
+}
+
+.quests {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Poppins", sans-serif;
+    background-color: #00000046;
+    border: 1px solid rgba(102, 87, 218, 0.49);
+    position: relative;
+}
+
+.quests .ch{
+    opacity: 0;
+    z-index: 0;
+    transition:  .6s cubic-bezier(.25,1,.5,1);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+    bottom: 0%;
+    background-image: radial-gradient(57% 83% at 50% 50%,rgba(208, 183, 223, 0.4) 0%,rgba(255,255,255,0) 100%);
+}
+.quests:hover .ch{
+    opacity: 1;
+}
+
+.q1,
+.q2 {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.quests p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    padding-bottom: 20px;
+}
+
+.quests h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #4a447b;
+    -webkit-text-fill-color: #4a447b !important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #4a447b !important;
+}
+
+.quests h4 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.checked_q1,
+.checked_q2 {
+    margin-top: -7px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+.checked_q1 i,
+.checked_q2 i {
+    position: relative;
+}
+
+.artistofthemonth .profileimg,
+.sellerofthemonth .profileimg {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+}
+
+.artistofthemonth .profileimgblur,
+.sellerofthemonth .profileimgblur {
+    filter: blur(6px);
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    position: absolute;
+}
+
+.artistofthemonth h2,
+.sellerofthemonth h2 {
+    margin-top: 40px;
+    margin-left: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #A4A4A4;
+    -webkit-text-fill-color: #fff!important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #fff !important;
+    font-size: 16px;
+}
+
+.artistofthemonth a,
+.sellerofthemonth a {
+    text-decoration: none;
+    color: #6657DA;
+}
+
+.artistofthemonth h3,
+.sellerofthemonth h3 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #6657DA;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.q1,
+.q2 {
+    margin-top: 0px;
+}
+
+.profile_bar .nonotif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1150px) {
+    .profile_bar .nonotif {
+        position: relative;
+        width: max-content;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .profile_bar .nonotif {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .sc1 i {
+        font-size: 15px;
+    }
+    .notification .notif_text {
+        font-size: 11px;
+    }
+    .notification .notif_username a {
+        font-size: 11px;
+    }
+    .profile_bar {
+        padding: 20px 10px;
+        padding-top: 10px;
+    }
+    .notification .notification_content .notif_text {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .media_card h3 {
+        font-size: 12px;
+    }
+    .media_card h1 {
+        font-size: 12px;
+    }
+    .media_card a i {
+        font-size: 13px;
+    }
+    .artistofthemonth .profileimgblur,
+    .sellerofthemonth .profileimgblur {
+        height: 140px;
+    }
+    .artistofthemonth .profileimg,
+    .sellerofthemonth .profileimg {
+        height: 100px;
+        width: 100px;
+        margin-top: 20px;
+    }
+    .artistofthemonth h2,
+    .sellerofthemonth h2 {
+        margin-top: 30px;
+        font-size: 13px;
+    }
+    .artistofthemonth h3,
+    .sellerofthemonth h3 {
+        font-size: 17px;
+    }
+    .quests h4,
+    .quests h1,
+    .quests p {
+        font-size: 12px;
+    }
+    .q1,
+    .q2 {
+        margin-top: 0px;
+    }
+    .checked_q1,
+    .checked_q2 {
+        height: 25px;
+        width: 25px;
+        padding: 2px 7px;
+        margin-top: -4px;
+    }
+    .checked_q1 i,
+    .checked_q2 i {
+        font-size: 15px;
+    }
+    .frow h5 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .notification img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .dm {
+        padding-bottom: 0;
+    }
+    .frow {
+        display: none;
+    }
+    .notification img {
+        display: block;
+    }
+    .notification {
+        width: 480px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .r_side {
+        width: 480px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .feed_with_user {
+        height: calc(100vh - 130px);
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .feed_posts {
+        background: #ffffff08;
+        height: fit-content;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .main_container {
+        width: 100%;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        background-image: url(/img/resp.png);
+        background-size: contain;
+        padding-bottom: 75px;
+    }
+    .navbar_contanier {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        z-index: 100;
+        background-color: #00000046;
+        backdrop-filter: blur(10px);
+    }
+    .profile_bar {
+        display: block;
+        border-radius: 0px;
+        width: 100%;
+        padding-top: 0px;
+        margin: 0px;
+        height: fit-content;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding-bottom: 150px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .r_side,
+    .notification {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .r_side,
+    .notification {
+        width: 400px;
+    }
+    .artistofthemonth .profileimgblur,
+    .sellerofthemonth .profileimgblur {
+        height: 120px;
+    }
+    .artistofthemonth .profileimg,
+    .sellerofthemonth .profileimg {
+        height: 90px;
+        width: 90px;
+        margin-top: 15px;
+    }
+    .artistofthemonth h2,
+    .sellerofthemonth h2 {
+        margin-top: 25px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .notification img {
+        display: none;
+    }
+    .sc1 i {
+        font-size: 12px;
+    }
+    .checked_q1,
+    .checked_q2 {
+        height: 25px;
+        width: 25px;
+        padding: 1px 7px;
+        margin-top: 2px;
+    }
+    .checked_q1 i,
+    .checked_q2 i {
+        font-size: 11px;
+    }
+    .r_side,
+    .notification {
+        width: 100%;
+    }
+    .feed_with_user {
+        height: calc(100vh - 120px);
+    }
+    .r_side .monthly_cards {
+        display: block;
+    }
+    .artistofthemonth,
+    .sellerofthemonth {
+        width: 100%;
+    }
+    .sellerofthemonth {
+        margin-top: 30px;
+    }
+    .media_card h3 {
+        font-size: 10px;
+    }
+    .quests h4,
+    .quests p {
+        font-size: 10px;
+    }
+    .profile_bar{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .notifications_card {
+        padding: 5px;
+    }
+    .media_card {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .container_2 {
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        overflow: unset;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-height: 750px) and (min-width: 1151px) {
+    .dm,
+    .feed_posts,
+    .profile_bar {
+        height: 80vh;
+    }
+}

@@ -1,0 +1,255 @@
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 10s linear infinite;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.intro {
+    position: absolute;
+    left: 50%;
+    box-shadow: 0 -6px 20px 0 #6c5ce7, 0 6px 20px 0 #6c5ce7;
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    top: 50%;
+    font-size: 25px;
+    color: #49b618;
+    background-color: rgb(33, 33, 33);
+    width: 500px;
+    height: fit-content;
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    z-index: 100;
+    padding-bottom: 24px;
+    transform: translate(-50%, -50%);
+}
+
+.sc1 p {
+    margin-top: -5px;
+    color: #dddbff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #dddbff;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.sc1 h3 {
+    font-family: "DM Sans", sans-serif;
+    color: #6c5ce7;
+    margin-top: 35px;
+}
+
+.sc1 .firstInput {
+    margin-top: 40px;
+}
+
+.sc1 input[type="submit"] {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: linear 0.3s;
+}
+
+.sc1 input[type="submit"]:hover {
+    opacity: 1;
+    background-color: rgb(60, 60, 60);
+}
+
+.sc1 h6 {
+    font-family: "DM Sans", sans-serif;
+    margin-top: 30px;
+    color: white;
+    font-size: 15px;
+    transform: translateY(-5px);
+    text-decoration: underline;
+    font-weight: 100;
+}
+
+.sc1 a {
+    text-decoration: none;
+}
+
+.sc1 input {
+    font-family: "DM Sans", sans-serif;
+    color: white;
+    width: 350px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    outline: none;
+    background-color: rgb(84, 84, 84);
+    margin-top: 20px;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.sc1 .logo {
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+.form button {
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 900;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: linear 0.3s;
+    font-family: "DM Sans", sans-serif;
+    background-color: rgb(84, 84, 84);
+    background-color: #6657DA;
+}
+
+.StripeElement {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form input {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form button:hover {
+    opacity: 1;
+    background-color: rgb(60, 60, 60);
+}
+
+.flexInputs {
+    display: flex;
+    width: 350px;
+    margin-left: 50%;
+    justify-content: space-between;
+    transform: translateX(-50%);
+}
+
+.flexInputs input {
+    width: 170px;
+}
+
+input.checck {
+    width: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1500px) {}
+
+@media screen and (max-width: 850px) {
+    .intro {
+        position: unset;
+        font-size: 24px;
+        width: 560px;
+        padding: 16px;
+        height: 520px;
+        margin: auto;
+        margin-top: 15%;
+        backdrop-filter: blur(50px);
+        transform: translate(0);
+    }
+    .sc1 input {
+        width: 400px;
+        font-size: 14px;
+    }
+    .sc1 .logo {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+    .flexInputs {
+        display: flex;
+        width: 400px;
+        margin-left: 0;
+        margin: auto;
+        justify-content: space-between;
+        transform: translateX(0);
+    }
+    .flexInputs input {
+        width: 190px;
+    }
+    input.checck {
+        width: 16px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .intro {
+        width: 400px;
+    }
+    .sc1 input {
+        width: 350px;
+    }
+    .flexInputs {
+        width: 350px;
+    }
+    .flexInputs input {
+        width: 170px;
+    }
+    input.checck {
+        width: 16px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .intro {
+        width: 300px;
+    }
+    .sc1 input {
+        width: 265px;
+    }
+    .flexInputs {
+        width: 265px;
+    }
+    .flexInputs input {
+        width: 125px;
+    }
+    input.checck {
+        width: 16px;
+        margin-right: 10px;
+    }
+    .sc1 input[type="submit"] {
+        font-size: 12px
+    }
+}

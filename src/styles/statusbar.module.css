@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+.status_bar {
+    display: flex;
+    padding: 3px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greets_to_user {
+    color: #fff;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #fff !important;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.container_searchbar {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10.5px 0px;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    border: solid 1px #ffd11867;
+    border-radius: 5px;
+    color: #ffd218;
+    cursor: pointer;
+    background-color: #00000046;
+    background-color: #ffffff1a;
+    font-size: 10px;
+}
+
+.searchbox svg {
+    color: #ffd218;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.searchInput {
+    border: 0;
+    width: 100%;
+    color: #fff;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-text-stroke-width: 1px !important;
+    -webkit-text-stroke-color: #fff !important;
+    background: transparent;
+    font-family: "DM Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.searchInput::placeholder {
+    color: #fff;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchInput:focus-visible {
+    outline: none;
+}
+
+.user_btns {
+    display: flex;
+    margin-left: 10px;
+}
+
+.user_btns svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.profileimg {
+    width: 30px;
+    margin-left: 10px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 850px) {
+    
+
+    .searchbox {
+        margin: auto 0;
+        
+    }
+
+    .greets_to_user {
+        display: none;
+    }
+
+    .status_bar {
+        padding: 10px 20px;
+        background: #00000046;
+    }
+
+    .container_searchbar {
+        justify-content: right;
+        width: 100%;
+        padding: 6.5px 0px;
+    }
+
+    .searchInput {
+        font-size: 14px;
+    }
+
+    .searchbox svg {
+        font-size: 24px;
+    }
+    .profileimg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .searchbox {
+        height: 28px;
+    }
+
+    .status_bar {
+        padding: 4px 18px;
+    }
+
+    .searchbox svg {
+        font-size: 18px;
+    }
+
+    .searchInput {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+   
+    .searchbox svg {
+        font-size: 16px;
+    }
+
+    .searchInput {
+        font-size: 14px;
+    }
+
+    .searchbox {
+        height: 28px;
+    }
+}

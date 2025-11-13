@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+.sc1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #313131 0%, black 100%);
+    animation: backgroundAnm 30s linear infinite;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+@keyframes backgroundAnm {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.vidbg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    }
+
+.intro {
+    position: absolute;
+    left: 50%;
+    box-shadow: /* ie */
+                 0px -10px 15px -6px  rgba(255,000,000,0.7), /* top - THE RED SHADOW */
+                 0px  5px  15px  0px  rgba(000,000,000,0.3), /* bottom */
+                 5px  0px  15px  0px  rgba(000,000,000,0.3), /* right */
+                -5px  0px  15px  0px  rgba(000,000,000,0.3); /* left */
+    -webkit-box-shadow:
+                 0px -10px 15px -7px  rgba(0, 0, 0, 0.18), /* top - THE RED SHADOW */
+                 0px  5px  15px  0px  rgba(000,000,000,0.18), /* bottom */
+                 5px  0px  15px  0px  rgba(000,000,000,0.18), /* right */
+                -5px  0px  15px  0px  rgba(000,000,000,0.18); /* left */
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    top: 50%;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(33, 33, 33, 0.582);
+    backdrop-filter: blur(5px);
+    width: 80vw;
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 20px;
+    z-index: 100;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.intro h5 {
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.spann {
+    color: #6c5ce7;
+}
+
+.sc1 p {
+    margin-top: -5px;
+    color: #dddbff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #dddbff;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.sc1 h3 {
+    font-family: "Poppins", sans-serif;
+    color: #6c5ce7;
+    margin-top: 15px;
+    font-weight: 900;
+}
+
+.intro h5 {
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.sc1 h2 {
+    font-family: "Poppins", sans-serif;
+    color: #6c5ce7;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.sc1 h6 {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.sc1 a button {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #6c5ce7;
+    padding: 10px;
+    outline: none;
+    border: none;
+    position: relative;
+    width: 300px;
+    box-shadow: 0 -6px 20px 0 #6c5ce7, 0 6px 20px 0 #6c5ce7;
+    border-radius: 10px;
+}
+
+.sc1 i {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: 1;
+    color: #1B1B1B;
+    font-size: 30px;
+    animation-name: anmBgI;
+    animation-timing-function: ease-in;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anmBgI {
+    0%,
+    25% {
+        color: #1B1B1B;
+    }
+    30% {
+        color: #6c5ce793;
+    }
+    35%,
+    90% {
+        color: #1B1B1B;
+    }
+    95% {
+        color: #6c5ce793;
+    }
+    100% {
+        color: #1B1B1B;
+    }
+}
+
+.sc1 .logo {
+    width: 200px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:1200px) {
+    .sc1 i {
+        font-size: 20px;
+    }
+    .intro h5 {
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
+        margin-top: 15px;
+        font-weight: 900;
+        font-size: 16px;
+    }
+    .sc1 h2 {
+        font-family: "Poppins", sans-serif;
+        color: #6c5ce7;
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .sc1 a button {
+        width: 250px;
+    }
+    .sc1 h6 {
+        font-size: 15px;
+    }
+    .intro h5 {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .sc1 i {
+        font-size: 14px;
+    }
+    .sc1 h2 {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    .sc1 h3 {
+        font-size: 18px;
+    }
+    .intro {
+        position: absolute;
+        font-size: 24px;
+        width: 70vw;
+        padding: 16px;
+        height: 70vh;
+    }
+    .from_error {
+        width: 400px;
+        font-size: 11px !important;
+        margin-top: 8px !important;
+    }
+    .sc1 input {
+        width: 400px;
+        font-size: 14px;
+    }
+    .sc1 .logo {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sc1 h3 {
+        font-size: 13px;
+    }
+    .sc1 h2 {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    .sc1 p {
+        font-size: 12px;
+    }
+    .sc1 a button {
+        width: 200px;
+    }
+    .intro h5 {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    .sc1 h6 {
+        font-size: 12px;
+    }
+    .intro {
+        position: absolute;
+        font-size: 24px;
+        width: 80vw;
+        padding: 16px;
+        height: 60vh;
+    }
+    .sc1 .logo {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sc1 h3 {
+        font-size: 11px;
+    }
+    .sc1 h2 {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .sc1 a button {
+        width: 200px;
+    }
+    .intro h5 {
+        margin-top: 7px;
+        font-size: 10px;
+    }
+    .sc1 h6 {
+        font-size: 12px;
+    }
+    .intro {
+        position: absolute;
+        font-size: 24px;
+        width: 250px;
+        padding: 13px;
+        height: 80vh;
+    }
+    .sc1 .logo {
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+}
